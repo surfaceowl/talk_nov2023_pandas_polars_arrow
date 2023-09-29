@@ -1,0 +1,24 @@
+# presentation tools
+jupyterlab==4.0.6
+jupyterlab-rise==0.41.0
+jupyter-server==2.7.3
+jupyterlab_code_formatter==2.2.1
+jupyterlab-execute-time==3.0.1
+jupyterlab-search-replace==1.0.2
+jupyter_nbextensions_configuratori==0.6.3
+
+# core libraries
+numba==0.58.0                                              # required for python 3.11 support
+numpy==1.25.2
+pandas[consortium-standard, parquet, performance]==2.1.1
+polars[pandas, pyarrow]==0.19.5
+pyarrow==13.0.0
+
+# supporting libraries
+black[jupyter]
+bokeh==3.2.2
+Faker==19.6.2
+psutil
+
+
+
