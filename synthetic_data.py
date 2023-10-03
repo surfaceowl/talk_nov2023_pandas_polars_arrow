@@ -1,3 +1,7 @@
+"""
+simple script to generate a healty amount of synthetic data for testing pandas and polars with
+note - the output is .gitignored to keep repo slim
+"""
 import numpy as np
 import pandas as pd
 from faker import Faker
