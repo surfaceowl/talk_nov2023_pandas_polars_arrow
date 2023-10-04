@@ -5,7 +5,10 @@ jupyter-server==2.7.3
 jupyterlab_code_formatter==2.2.1
 jupyterlab-execute-time==3.0.1
 jupyterlab-search-replace==1.0.2
+jupyter-contrib-nbextensions==0.7.0
 jupyter_nbextensions_configurator==0.6.3
+notebook==7.0.4
+diagrams==0.23.3
 
 # core libraries
 numba==0.58.0                                              # required for python 3.11 support
