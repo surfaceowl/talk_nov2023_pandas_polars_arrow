@@ -1,0 +1,3 @@
+function_name,elapsed_time,iteration
+pandas_read_parquet,21.648858785629272,0
+polars_read_parquet,2.15631103515625,0

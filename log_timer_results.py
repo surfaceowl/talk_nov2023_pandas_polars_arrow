@@ -18,6 +18,7 @@ class BufferedCsvLogger:
     def log(self, func_name, elapsed_time, iteration, flush_on_return):
         """Log function metrics."""
         with self.lock:
+            print(f"saving results: {func_name}")
             self.buffer.append({'function_name': func_name, 'elapsed_time': elapsed_time, 'iteration': iteration})
             
             if len(self.buffer) >= self.buffer_size or flush_on_return:
