@@ -9,8 +9,8 @@ import threading
 
 class BufferedCsvLogger:
     """Buffered, thread-safe logger for function calls."""
-    def __init__(self, filename='function_log.csv', buffer_size=10):
-        self.filename = filename
+    def __init__(self, log_filename='function_log.csv', buffer_size=10):
+        self.filename = log_filename
         self.buffer_size = buffer_size
         self.buffer = []
         self.lock = threading.Lock()
@@ -36,13 +36,15 @@ class BufferedCsvLogger:
             writer.writerows(self.buffer)
             self.buffer.clear()
 
-def log_to_csv(filename='function_log.csv', buffer_size=10, iteration=0):
+def log_to_csv(log_filename='function_log.csv', buffer_size=10, flush_on_return=True):
     """Decorator factory for logging function metrics."""
-    logger = BufferedCsvLogger(filename, buffer_size)
+    logger = BufferedCsvLogger(log_filename, buffer_size)
     
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
+            iteration = kwargs.pop('iteration', 0)  # Get the iteration and remove it from kwargs FIRST
+            
             start_time = time.time()
             try:
                 result = func(*args, **kwargs)
@@ -52,3 +54,5 @@ def log_to_csv(filename='function_log.csv', buffer_size=10, iteration=0):
             return result
         return wrapper
     return decorator
+
+

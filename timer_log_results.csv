@@ -1,0 +1,16 @@
+function_name,elapsed_time,iteration
+pandas_read_csv_default,85.13258981704712,0
+pandas_read_csv_engine_c,68.56704926490784,0
+pandas_read_csv_engine_python,380.29760456085205,0
+pandas_read_csv_default_dtype_numpy,66.72569346427917,0
+pandas_read_csv_engine__c_dtype_numpy,57.590172290802,0
+pandas_read_csv_engine_python__dtype_numpy,252.6938192844391,0
+pandas_read_csv_engine_pyarrow,24.008196353912354,0
+pandas_read_csv_engine_pyarrow_dtype_numpy,25.333702325820923,0
+pandas_read_csv_engine_pyarrow_dtype_pyarrow,3.3732311725616455,0
+polars_read_csv,3.12402606010437,0
+polars_read_csv_gz,9.476699829101562,0
+pandas_read_csv_gz,64.3184461593628,0
+polars_read_csv_gz,7.577653169631958,0
+pandas_read_parquet,19.230560541152954,0
+polars_read_parquet,2.3818984031677246,0

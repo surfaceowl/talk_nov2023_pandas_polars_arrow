@@ -18,10 +18,18 @@ def generate_synthetic_data(num_records: int, seed: int = 77) -> pd.DataFrame:
     ages = np.random.normal(40, 15, num_records).astype(int)
     lucky_numbers = np.random.poisson(lam=1.0, size=num_records).astype(int)
     
-    occupations = np.random.choice([...], num_records)  # List of occupations
-    membership_statuses = np.random.choice([...], num_records)  # List of statuses
-    educations = np.random.choice([...], num_records)  # List of educations
-    date_started_python = pd.to_datetime([...])  # List of dates
+    occupations = np.random.choice(["Python Dev",
+    "Data Engineer",
+    "Data Scientist",
+    "Machine Learning Eng",
+    "DevOps Savior",
+    "Pandas Guru",
+    "Polars Guru",
+    "Apache Arrow Understudy",
+    "Rustacean",], num_records)  # List of occupations
+    membership_statuses = np.random.choice(["Supporting", "Managing", "Contributing", "Fellow", "Not Yet a Member"], num_records)  # List of statuses
+    educations = np.random.choice(["High School", "College", "Graduate", "Leetcode + sweat", "Raised by Wolves"], num_records)  # List of educations
+    date_started_python = pd.to_datetime(date_started_python = [fake.date_of_birth(minimum_age=12, maximum_age=100) for _ in range(num_records)])  # List of dates
     
     # Create DataFrame
     df = pd.DataFrame({
