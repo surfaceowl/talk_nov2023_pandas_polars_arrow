@@ -20,7 +20,7 @@ class BufferedCsvLogger:
         with self.lock:
             print(f"saving results: {func_name}")
             self.buffer.append({'function_name': func_name, 'elapsed_time': elapsed_time, 'iteration': iteration})
-            
+
             if len(self.buffer) >= self.buffer_size or flush_on_return:
                 self.flush()
 
@@ -30,22 +30,22 @@ class BufferedCsvLogger:
         with open(self.filename, 'a', newline='') as csv_file:
             fieldnames = ['function_name', 'elapsed_time', 'iteration']
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-            
+
             if not file_exists:
                 writer.writeheader()
-            
+
             writer.writerows(self.buffer)
             self.buffer.clear()
 
 def log_to_csv(log_filename='function_log.csv', buffer_size=10, flush_on_return=True):
     """Decorator factory for logging function metrics."""
     logger = BufferedCsvLogger(log_filename, buffer_size)
-    
+
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
             iteration = kwargs.pop('iteration', 0)  # Get the iteration and remove it from kwargs FIRST
-            
+
             start_time = time.time()
             try:
                 result = func(*args, **kwargs)
@@ -55,5 +55,3 @@ def log_to_csv(log_filename='function_log.csv', buffer_size=10, flush_on_return=
             return result
         return wrapper
     return decorator
-
-
