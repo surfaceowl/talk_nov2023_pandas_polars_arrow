@@ -11,7 +11,7 @@ numba==0.58.0                                              # required for python
 numpy==1.25.2
 pandas[consortium-standard, parquet, performance]==2.1.1
 polars[pandas, pyarrow]==0.19.7
-pyarrow==13.0.0
+pyarrow==14.0.1
 
 # supporting libraries
 black[jupyter]
