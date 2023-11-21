@@ -1,5 +1,5 @@
 # presentation tools
-jupyterlab==4.0.8
+jupyterlab==4.0.9
 jupyterlab-rise==0.41.0
 jupyterlab_code_formatter==2.2.1
 jupyterlab-execute-time==3.1.0
