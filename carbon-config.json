@@ -25,10 +25,11 @@
   "name": "pandas-custom",
   "width": "800",
   "highlights": {
-    "variable": "rgba(255,160,75,0.8)",
     "attribute": "rgba(245,232,199,1)",
+    "comment": "rgba(176,176,166,1)",
+    "keyword":"rgba(255,208,110,0.95)",
     "string": "rgba(245,232,199,0.9)",
     "property": "rgba(133,165,255,1)",
-    "comment": "rgba(176,176,166,1)"
+    "variable": "rgba(255,160,75,0.8)"
   }
 }
