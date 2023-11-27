@@ -18,7 +18,7 @@ black[jupyter]
 Faker==20.0.3
 isort==5.12.0
 matplotlib==3.8.1
-pre-commit
+pre-commit>=3.5.0
 psutil
 
 # QR code

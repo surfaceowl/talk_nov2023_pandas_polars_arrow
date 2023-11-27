@@ -7,6 +7,7 @@ convert_csv_to_parquet_polars("/path/to/source_directory", "/path/to/target_dire
 from pathlib import Path
 import polars as pl
 
+
 def convert_csv_to_parquet_polars(source_directory, target_directory):
     """Convert all CSV files from a source directory to Parquet format in a target directory using Polars.
 
@@ -20,8 +21,8 @@ def convert_csv_to_parquet_polars(source_directory, target_directory):
     # Create target directory if it doesn't exist
     target_path.mkdir(parents=True, exist_ok=True)
 
-    for csv_file in source_path.glob('*.csv'):
-        parquet_file = target_path / csv_file.name.replace('.csv', '.parquet')
+    for csv_file in source_path.glob("*.csv"):
+        parquet_file = target_path / csv_file.name.replace(".csv", ".parquet")
 
         # Read CSV into a Polars DataFrame
         df = pl.read_csv(str(csv_file))
