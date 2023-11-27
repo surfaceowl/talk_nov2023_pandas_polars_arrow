@@ -20,3 +20,6 @@ isort==5.12.0
 matplotlib==3.8.1
 pre-commit
 psutil
+
+# QR code
+qrcode[pil]==7.4.2
