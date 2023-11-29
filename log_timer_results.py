@@ -20,7 +20,7 @@ class BufferedCsvLogger:
     def log(self, func_name, elapsed_time, iteration, flush_on_return):
         """Log function metrics."""
         with self.lock:
-            print(f"saving results: {func_name}")
+            print(f"saving results: {func_name:<45} #{iteration:>3} {elapsed_time:>20}")
             self.buffer.append(
                 {
                     "function_name": func_name,

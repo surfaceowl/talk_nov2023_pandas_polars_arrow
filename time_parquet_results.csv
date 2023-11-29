@@ -1,3 +1,0 @@
-function_name,elapsed_time,iteration
-pandas_read_parquet,23.75493097305298,0
-polars_read_parquet,2.275834798812866,0
